@@ -12,14 +12,14 @@
 {% block 'body' %}
 
     {% static '' %}
-    
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 sidebar">
                 <div class="logo_sidebar">
                     
                     <h2 class="logo">
-                        <img class="img_logo_sidebar" src="">IMOBI
+                        <img class="img_logo_sidebar" src="{% static 'autenticacao/img/logo.png' %}">IMOBI
                     </h2>
 
                 </div>
@@ -34,7 +34,7 @@
                         <p style="margin-top:-20px" class="cor_branca descricao">Nos melhores preços</p>
                         <br>
                         <br>
-                        <a class="btn_logar" href="">LOGAR</a>
+                        <a class="btn_logar" href="{% url 'login'%}">LOGAR</a>
                     </div>
 
                 </div>
