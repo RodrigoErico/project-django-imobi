@@ -17,6 +17,15 @@ def cadastro(request):
         
         if user.exists():
             return redirect('/auth/cadastro')
+        
+        try:
+            user = User.objects.create_user(username=username,
+                                            email=email,
+                                            password=password)
+            user.save()
+            return redirect('/auth/login')
+        except:
+            return redirect('/auth/cadastro')
 
         return HttpResponse(f'{username} {email} {password}')
 
